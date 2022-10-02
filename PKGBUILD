@@ -30,6 +30,9 @@ package() {
     ln -sf /usr/bin/steam-jupiter "${pkgdir}/usr/bin/steam"
     ln -sf /usr/bin/true "${pkgdir}/usr/bin/steamdeps"
 
+    mv ${pkgdir}/usr/share/licenses/steam-jupiter-stable ${pkgdir}/usr/share/licenses/${pkgname}
+    mv ${pkgdir}/usr/share/doc/steam-jupiter-stable ${pkgdir}/usr/share/doc/${pkgname}
+
     tar -xvf ${pkgdir}/usr/lib/steam/bootstraplinux_ubuntu12_32.tar.xz ./bootstrap.tar.xz
     rm ${pkgdir}/usr/lib/steam/bootstraplinux_ubuntu12_32.tar.xz
     mv ./bootstrap.tar.xz ${pkgdir}/usr/lib/steam/bootstraplinux_ubuntu12_32.tar.xz
